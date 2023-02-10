@@ -1,6 +1,5 @@
 package net.ibokette.continents
 
-import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Service
 
@@ -8,16 +7,14 @@ import org.springframework.stereotype.Service
 class ContinentsService(val countryClient: CountryClient) {
 
     fun doSoapStuff(): String {
-        val countryNameResponse = countryClient.getCountry("US")
-        logger.info("Result is ${countryNameResponse.countryNameResult}")
-        return countryNameResponse.countryNameResult
+        return getCountryForCode("US")
     }
 
     fun getCountryForCode(code: String): String {
         logger.info("Input code is $code")
-        val countryNameResponse = countryClient.getCountry(code)
-        logger.info("Result is ${countryNameResponse.countryNameResult}")
-        return countryNameResponse.countryNameResult
+        return countryClient.getCountry(code).countryNameResult.also{
+            logger.info("Result is $it")
+        }
     }
 
     companion object {
