@@ -1,10 +1,10 @@
-package net.ibokette.continents
+package net.ibokette.country
 
 import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Service
 
 @Service
-class ContinentsService(val countryClient: CountryClient) {
+class CountryService(val countryClient: CountryClient) {
 
     fun doSoapStuff(): String {
         return getCountryForCode("US")

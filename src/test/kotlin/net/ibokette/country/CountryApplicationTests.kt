@@ -1,10 +1,10 @@
-package net.ibokette.continents
+package net.ibokette.country
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
 
 @SpringBootTest
-class ContinentsApplicationTests {
+class CountryApplicationTests {
 
 	@Test
 	fun contextLoads() {

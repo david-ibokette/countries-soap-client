@@ -1,4 +1,4 @@
-package net.ibokette.continents
+package net.ibokette.country
 
 import net.ibokette.wsdl.CountryName
 import net.ibokette.wsdl.CountryNameResponse

@@ -1,4 +1,4 @@
-package net.ibokette.continents
+package net.ibokette.country
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
